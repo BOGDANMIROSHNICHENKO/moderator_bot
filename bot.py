@@ -13,18 +13,18 @@ bot = Bot(token=cfg.TOKEN)
 
 
 kb =  types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-kb2 = types.KeyboardButton('🧑‍💻 Мои команды 🧑‍💻:')
+kb2 = types.KeyboardButton('🧑‍💻 My commands 🧑‍💻:')
 kb3 = types.KeyboardButton('🧑‍💻 Главное меню 🧑‍💻')
 kb4 = types.KeyboardButton('🧑‍💻 Основатель 🧑‍💻')
 kb.add(kb2,kb3,kb4)
 
 
-@dp.message_handler(content_types=types.ContentType.NEW_CHAT_MEMBERS)
+@dp.message_handler(content_types=types.ContentType.NEW_CHAT_MEMBERS) #greeting new users
 async def new_chat_member_handler(message: types.Message):
     for member in message.new_chat_members:
-        await message.reply(f"Добро пожаловать, {member.full_name} (@{member.username})!")
+        await message.reply(f"Welcome, {member.full_name} (@{member.username})!")
 
-@dp.message_handler(content_types=types.ContentType.LEFT_CHAT_MEMBER)
+@dp.message_handler(content_types=types.ContentType.LEFT_CHAT_MEMBER) #farewell to departed users
 async def left_chat_member_handler(message: types.Message):
     member = message.left_chat_member
     await message.reply(f"До свидания, {member.full_name} (@{member.username})!")
@@ -32,9 +32,9 @@ async def left_chat_member_handler(message: types.Message):
 
 @dp.message_handler(commands=['start'])
 async def startbot(message: types.Message):
-   await message.answer(f'Привет {message.from_user.first_name},выбери одну из кнопок ниже для продолжения', reply_markup=kb)    
+   await message.answer(f'Hello {message.from_user.first_name},выбери одну из кнопок ниже для продолжения', reply_markup=kb)    
 
-@dp.message_handler(Text(equals="🧑‍💻 Мои команды 🧑‍💻:"))
+@dp.message_handler(Text(equals="🧑‍💻 My commands 🧑‍💻:"))
 async def kommenu(message: types.Message):
       await message.reply(f"{message.from_user.first_name}, специально для вас я покажу свои команды \n Мои команды: /start, \n /ban (для администрации)")
 

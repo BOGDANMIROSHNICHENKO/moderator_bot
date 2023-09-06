@@ -1,9 +1,9 @@
 from aiogram import Bot, Dispatcher, executor, types, asyncio, filters
 
-TOKEN='6568046818:AAHmPLWNLQoZNQ9lcqMBnq_fKYLNnfSg_8A'
+TOKEN='Your Token'
 
-WORDS=['test', 'ютубер','тест']
+WORDS=['Bad Words']
 
-admins = [1083597384]  
+admins = [Admins id]  
 
-RESPECT = ['спасибо', 'спс', 'сяб', 'благодарю']
+RESPECT = ['Respect Words']

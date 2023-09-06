@@ -14,8 +14,8 @@ bot = Bot(token=cfg.TOKEN)
 
 kb =  types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 kb2 = types.KeyboardButton('🧑‍💻 My commands 🧑‍💻:')
-kb3 = types.KeyboardButton('🧑‍💻 Главное меню 🧑‍💻')
-kb4 = types.KeyboardButton('🧑‍💻 Основатель 🧑‍💻')
+kb3 = types.KeyboardButton('🧑‍💻 Main menu 🧑‍💻')
+kb4 = types.KeyboardButton('🧑‍💻 Owner 🧑‍💻')
 kb.add(kb2,kb3,kb4)
 
 
@@ -38,11 +38,11 @@ async def startbot(message: types.Message):
 async def kommenu(message: types.Message):
       await message.reply(f"{message.from_user.first_name}, специально для вас я покажу свои команды \n Мои команды: /start, \n /ban (для администрации)")
 
-@dp.message_handler(Text(equals="🧑‍💻 Главное меню 🧑‍💻"))
+@dp.message_handler(Text(equals="🧑‍💻 Main menu 🧑‍💻"))
 async def kommenu2(message: types.Message):   
    await message.reply(f"{message.from_user.first_name}, <b>главное меню</b> по вашей просьбе", reply_markup=kb, parse_mode=types.ParseMode.HTML)
 
-@dp.message_handler(Text(equals="🧑‍💻 Основатель 🧑‍💻"))
+@dp.message_handler(Text(equals="🧑‍💻 Owner 🧑‍💻"))
 async def kommenu3(message: types.Message):   
    await message.reply(f"{message.from_user.first_name}, <b>Данный бот был сделан разработчиком <a href='https://t.me/Bogdan_Mirosh'>WEBBOGDAN</a></b>, чтобы поддержать нашего с вами любимца) подпишитесь на его <a href='https://github.com/BOGDANMIROSHNICHENKO'><b>GITHUB</b></a>", reply_markup=kb, parse_mode=types.ParseMode.HTML)
 

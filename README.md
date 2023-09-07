@@ -73,6 +73,16 @@ Then, in the telegram, you can create a group and add your bot to it. In order f
 
 Voila. Our bot is working with you. To check its health, enter the < code >/start </code> command.
 
+## What can this bot do?
+
+1. This bot can filter bad words and remove them from the chat.
+2. Ability to ban a user in response to his message
+3. Greeting new chat users, as well as farewell to those who left it.
+4. Filtering words of gratitude.
+5. There are buttons with a menu that lists the founder's contacts, and a "My Teams" button that lists all the bot's commands.
+
+<p align='center'>That's all for now. The bot will be improved!</p>
+
 P.s. you can change all the text in both files to yours.
 
 ## Документация
@@ -132,6 +142,16 @@ can help you create and manage Telegram bots. If you're new to the Bot API, plea
 Затем уже в телеграме вы можете создать группу и добавить в неее вашего бота. Для того, чтобы он работал необходимо выдать ему разрешения на отправку сообщений, а также сдлеать его администратором группы.
 
 Вуаля. Наш с вами бот работает. Для проверки его работоспособности введите команду <code>/start</code>. 
+
+## Что умеет этот бот?
+
+1. Данный бот умеет фильтровать плохие слова и удалять их из чата.
+2. Возможность бана юзера в ответ на его сообщение
+3. Приветствие новых пользователей чата, а также прощание с ушедшими из него.
+4. Фильтрация слов благодарности.
+5. Есть кнопки с меню, в котором указаны контакты основателя, и кнопка "Мои команды", где указаны все команды бота.
+
+<p align='center'>На этом пока все. Бот будет дорабатываться!</p>
 
 P.s весь текст в обоих файлых вы можете изменить на свой.
 
